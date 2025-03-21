@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "0b32d4c2-f4af-49f5-8814-878cf41c1e76",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -125,27 +134,10 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Jump",
-            "id": "412e5587-bb90-43f9-80ee-0b624747c01a",
-            "actions": [
-                {
-                    "name": "Jump",
-                    "type": "Button",
-                    "id": "6cd35a90-2e33-4b83-a12f-2cb82671b869",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "83aea991-0b0f-49cc-988e-f13d3cc42a59",
+                    "id": "c2fc77e5-735d-4e0b-9157-a37ee4d25fc0",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
@@ -156,19 +148,8 @@
                 },
                 {
                     "name": "",
-                    "id": "b3748c97-5bf8-43d1-badf-92b52f9c7961",
+                    "id": "4f90ff04-2de4-4b65-9c31-bc56c335544d",
                     "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1082e5f7-2acc-4779-b3d1-d118c33d12c5",
-                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
