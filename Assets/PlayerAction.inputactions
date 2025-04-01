@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "cb35c6e4-a112-4834-820d-4c669365bb15",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -137,8 +146,8 @@
                 },
                 {
                     "name": "",
-                    "id": "c2fc77e5-735d-4e0b-9157-a37ee4d25fc0",
-                    "path": "<Keyboard>/space",
+                    "id": "4f90ff04-2de4-4b65-9c31-bc56c335544d",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -148,12 +157,12 @@
                 },
                 {
                     "name": "",
-                    "id": "4f90ff04-2de4-4b65-9c31-bc56c335544d",
-                    "path": "<Keyboard>/w",
+                    "id": "28504b5f-5c1e-456c-ba19-eed6d2654814",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

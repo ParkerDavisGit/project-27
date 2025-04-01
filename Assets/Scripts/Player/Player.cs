@@ -21,7 +21,8 @@ public class Player : MonoBehaviour
 
     enum KeyType
     {
-        JUMP = 0
+        JUMP = 0,
+        ATTACK = 1
     }
 
     private Dictionary<KeyType, KeyState> keys;
@@ -75,6 +76,7 @@ public class Player : MonoBehaviour
         keys = new Dictionary<KeyType, KeyState>();
 
         keys.Add(KeyType.JUMP, new KeyState());
+        keys.Add(KeyType.ATTACK, new KeyState());
     }
 
     // Update is called once per frame
@@ -111,12 +113,6 @@ public class Player : MonoBehaviour
 
             test = true;
             gravityScale = .5f;
-
-            Collider2D[] enemiesToAttack = Physics2D.OverlapCircleAll(transform.position, 1.0f, enemyLayer);
-            foreach (Collider2D obj in enemiesToAttack)
-            {
-                obj.GetComponent<Enemy>().Whack();
-            }
         }
         else if (action.Movement.Jump.WasReleasedThisFrame())
         {
@@ -125,11 +121,31 @@ public class Player : MonoBehaviour
 
             gravityScale = 1.0f;
         }
+        if (action.Movement.Attack.WasPressedThisFrame())
+        {
+            keys[KeyType.ATTACK].pressed = true;
+            keys[KeyType.ATTACK].justPressed = true;
+        }
+        else if (action.Movement.Attack.WasReleasedThisFrame())
+        {
+            keys[KeyType.ATTACK].pressed = false;
+            keys[KeyType.ATTACK].justReleased = true;
+        }
     }
 
     private void Move()
     {
         onGround = feet.OnGround();
+
+        if (keys[KeyType.ATTACK].justPressed)
+        {
+            RaycastHit2D results = Physics2D.Raycast(transform.position, new Vector2(1f, 0f), 1f, LayerMask.GetMask("Enemies"));
+            
+            if (results)
+            {
+                results.transform.gameObject.GetComponent<Enemy>().Whack();
+            }
+        }
 
         if (buttonPresses[0] > .1f)
         {
@@ -163,6 +179,8 @@ public class Player : MonoBehaviour
 
         keys[KeyType.JUMP].justPressed = false;
         keys[KeyType.JUMP].justReleased = false;
+        keys[KeyType.ATTACK].justPressed = false;
+        keys[KeyType.ATTACK].justReleased = false;
     }
 
     public void Damage(int damage)
