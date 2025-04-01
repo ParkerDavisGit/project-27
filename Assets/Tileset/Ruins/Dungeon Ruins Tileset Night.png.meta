@@ -267,6 +267,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1559,7 +1572,65 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dungeon Ruins Tileset Night_0: -1589549018139861738
+      Dungeon Ruins Tileset Night_1: 2029111296055201508
+      Dungeon Ruins Tileset Night_10: 8152897986214559543
+      Dungeon Ruins Tileset Night_11: -5402475543951485988
+      Dungeon Ruins Tileset Night_12: 608268889192454978
+      Dungeon Ruins Tileset Night_13: -454947101157822771
+      Dungeon Ruins Tileset Night_14: 5776633986410296578
+      Dungeon Ruins Tileset Night_15: -8045847467119079449
+      Dungeon Ruins Tileset Night_16: -4688540224149453626
+      Dungeon Ruins Tileset Night_17: 1082051918192587948
+      Dungeon Ruins Tileset Night_18: 6502165685841145806
+      Dungeon Ruins Tileset Night_19: -3969248674607669321
+      Dungeon Ruins Tileset Night_2: 6386147172879849547
+      Dungeon Ruins Tileset Night_20: -2062694524926692109
+      Dungeon Ruins Tileset Night_21: 3404709433458779587
+      Dungeon Ruins Tileset Night_22: 8641187852918394670
+      Dungeon Ruins Tileset Night_23: -2126631061877403996
+      Dungeon Ruins Tileset Night_24: 7581616421991820273
+      Dungeon Ruins Tileset Night_25: -6578309067303730539
+      Dungeon Ruins Tileset Night_26: -3321649800674359365
+      Dungeon Ruins Tileset Night_27: 5539719338295028324
+      Dungeon Ruins Tileset Night_28: -2997104266996946395
+      Dungeon Ruins Tileset Night_29: 906364425070880000
+      Dungeon Ruins Tileset Night_3: -8067383437588788589
+      Dungeon Ruins Tileset Night_30: 727770065910211338
+      Dungeon Ruins Tileset Night_31: -1797650047131592087
+      Dungeon Ruins Tileset Night_32: -2444172402728518671
+      Dungeon Ruins Tileset Night_33: 6317708925003086965
+      Dungeon Ruins Tileset Night_34: 899224584227380081
+      Dungeon Ruins Tileset Night_35: 8789938462058726441
+      Dungeon Ruins Tileset Night_36: -2992234435992091564
+      Dungeon Ruins Tileset Night_37: 6381936498410413602
+      Dungeon Ruins Tileset Night_38: -5083110080813192923
+      Dungeon Ruins Tileset Night_39: -8521446970821331045
+      Dungeon Ruins Tileset Night_4: 46997869642505355
+      Dungeon Ruins Tileset Night_40: 3809622841859491363
+      Dungeon Ruins Tileset Night_41: 3256113814374619814
+      Dungeon Ruins Tileset Night_42: -6367033728243612812
+      Dungeon Ruins Tileset Night_43: 5504637440233944523
+      Dungeon Ruins Tileset Night_44: -5682835350520082818
+      Dungeon Ruins Tileset Night_45: 7245866493652757167
+      Dungeon Ruins Tileset Night_46: 6394291200671856286
+      Dungeon Ruins Tileset Night_47: 1547817759166870691
+      Dungeon Ruins Tileset Night_48: -471590692178319433
+      Dungeon Ruins Tileset Night_49: 1922859395384007650
+      Dungeon Ruins Tileset Night_5: 4009634814599786513
+      Dungeon Ruins Tileset Night_50: -2380179937804086112
+      Dungeon Ruins Tileset Night_51: 3575777304189724129
+      Dungeon Ruins Tileset Night_52: 2256957158919007306
+      Dungeon Ruins Tileset Night_53: 3609116014950105486
+      Dungeon Ruins Tileset Night_54: -7412077604066994254
+      Dungeon Ruins Tileset Night_55: -3603828980956605912
+      Dungeon Ruins Tileset Night_56: 1104970808015849865
+      Dungeon Ruins Tileset Night_57: 5771183930316505600
+      Dungeon Ruins Tileset Night_6: -7734250767194587664
+      Dungeon Ruins Tileset Night_7: 7972192902733978177
+      Dungeon Ruins Tileset Night_8: 4609155764900361409
+      Dungeon Ruins Tileset Night_9: -7023125592540059824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

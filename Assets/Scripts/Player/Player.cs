@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
     private Dictionary<KeyType, KeyState> keys;
 
     // Variables
+    public int health;
+
     public float speed;
     public float gravity;
     public float jumpForce;
@@ -48,6 +50,8 @@ public class Player : MonoBehaviour
     private float[] buttonPresses;
 
     private bool test;
+
+    public LayerMask enemyLayer;
 
     void Awake()
     {
@@ -107,6 +111,12 @@ public class Player : MonoBehaviour
 
             test = true;
             gravityScale = .5f;
+
+            Collider2D[] enemiesToAttack = Physics2D.OverlapCircleAll(transform.position, 1.0f, enemyLayer);
+            foreach (Collider2D obj in enemiesToAttack)
+            {
+                obj.GetComponent<Enemy>().Whack();
+            }
         }
         else if (action.Movement.Jump.WasReleasedThisFrame())
         {
@@ -153,5 +163,11 @@ public class Player : MonoBehaviour
 
         keys[KeyType.JUMP].justPressed = false;
         keys[KeyType.JUMP].justReleased = false;
+    }
+
+    public void Damage(int damage)
+    {
+        health -= damage;
+        print(health);
     }
 }
