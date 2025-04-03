@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
 
     // Variables
     public int health;
+    public int maxHealth;
 
     public float speed;
     public float gravity;
@@ -50,8 +51,6 @@ public class Player : MonoBehaviour
 
     private float[] buttonPresses;
 
-    private bool test;
-
     public LayerMask enemyLayer;
 
     void Awake()
@@ -70,8 +69,6 @@ public class Player : MonoBehaviour
         buttonPresses[2] = 0.0f;
         buttonPresses[3] = 0.0f;
         buttonPresses[4] = 0.0f;
-
-        test = false;
 
         keys = new Dictionary<KeyType, KeyState>();
 
@@ -111,7 +108,6 @@ public class Player : MonoBehaviour
             keys[KeyType.JUMP].pressed = true;
             keys[KeyType.JUMP].justPressed = true;
 
-            test = true;
             gravityScale = .5f;
         }
         else if (action.Movement.Jump.WasReleasedThisFrame())
@@ -183,9 +179,15 @@ public class Player : MonoBehaviour
         keys[KeyType.ATTACK].justReleased = false;
     }
 
-    public void Damage(int damage)
+    public void GetAttacked(int damage)
     {
         health -= damage;
-        print(health);
+
+        print($"HP: {health}/{maxHealth}");
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
