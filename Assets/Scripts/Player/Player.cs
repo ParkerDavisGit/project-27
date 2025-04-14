@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
@@ -53,6 +54,9 @@ public class Player : MonoBehaviour
 
     public LayerMask enemyLayer;
 
+
+    private ArrayList inventory;
+
     void Awake()
     {
         feet = GetComponentInChildren<Feet>();
@@ -74,6 +78,8 @@ public class Player : MonoBehaviour
 
         keys.Add(KeyType.JUMP, new KeyState());
         keys.Add(KeyType.ATTACK, new KeyState());
+
+        inventory = new ArrayList();
     }
 
     // Update is called once per frame
@@ -188,6 +194,16 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void PickupItem(Material obj)
+    {
+        inventory.Add(obj.type);  
+
+        foreach (string item in inventory)
+        {
+            print(item);
         }
     }
 }

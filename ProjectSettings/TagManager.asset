@@ -10,12 +10,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Ground
   - Enemies
-  - 
+  - Items
   - 
   - 
   - 
@@ -63,6 +63,9 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 1054793391
+    locked: 0
+  - name: Items
+    uniqueID: 550102293
     locked: 0
   - name: Player
     uniqueID: 1203968199
