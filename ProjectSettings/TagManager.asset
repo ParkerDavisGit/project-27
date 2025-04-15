@@ -73,5 +73,8 @@ TagManager:
   - name: GroundOverlay
     uniqueID: 746220943
     locked: 0
+  - name: UI
+    uniqueID: 3888470463
+    locked: 0
   m_RenderingLayers:
   - Default

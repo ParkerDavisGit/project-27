@@ -1,4 +1,5 @@
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using static System.Math;
@@ -29,6 +30,8 @@ public class Enemy : MonoBehaviour
     public Player player;
 
     private Rigidbody2D rb;
+
+    public enemyDrops drops;
 
     void Start()
     {
@@ -126,11 +129,20 @@ public class Enemy : MonoBehaviour
         health -= 1;
         if ((health <= 0) && currentState != EnemyState.Idle)
         {
-            Destroy(gameObject);
+            KillSelf();
         }
         //float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
         rb.AddForce(new Vector2(transform.position.x - player.transform.position.x, .5f) * 200);
+    }
+
+    public void KillSelf()
+    {
+        Material drop = Instantiate(drops.common_drop, transform.position, new Quaternion()).GetComponent<Material>();
+
+        drop.asEnemyDrop();
+
+        Destroy(gameObject);
     }
 
     // Visualize detection and attack ranges in scene view

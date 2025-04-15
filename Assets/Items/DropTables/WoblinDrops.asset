@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0128c4a08f8814e9065955c9c23843, type: 3}
+  m_Name: WoblinDrops
+  m_EditorClassIdentifier: 
+  enemyName: Woblin
+  common_drop: {fileID: 1563213465263421598, guid: f1570213b3b26a74da8c92bac0bf0ddc, type: 3}
+  uncommon_drop: {fileID: 0}

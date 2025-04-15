@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f0128c4a08f8814e9065955c9c23843, type: 3}
-  m_Name: defaultEnemy
+  m_Script: {fileID: 11500000, guid: df68c52d57c0a28499e4ad4aeb3474c4, type: 3}
+  m_Name: SpriteDex
   m_EditorClassIdentifier: 
-  enemyName: Woblin
-  speed: 3
-  health: 10
-  damage: 1
+  sprites:
+  - {fileID: -1868329023055460363, guid: 80009e4e7f175804a975c146c87637f7, type: 3}

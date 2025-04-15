@@ -54,8 +54,8 @@ public class Player : MonoBehaviour
 
     public LayerMask enemyLayer;
 
-
-    private ArrayList inventory;
+    public Inventory inventory;
+    public HealthDisplay healthDisplay;
 
     void Awake()
     {
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         keys.Add(KeyType.JUMP, new KeyState());
         keys.Add(KeyType.ATTACK, new KeyState());
 
-        inventory = new ArrayList();
+        //healthDisplay.SetText(string.Format("Health: {0}/{1}", health, maxHealth));
     }
 
     // Update is called once per frame
@@ -132,6 +132,11 @@ public class Player : MonoBehaviour
         {
             keys[KeyType.ATTACK].pressed = false;
             keys[KeyType.ATTACK].justReleased = true;
+        }
+
+        if (action.Movement.Inventory.WasPressedThisFrame())
+        {
+            inventory.ToggleInventory();
         }
     }
 
@@ -189,7 +194,12 @@ public class Player : MonoBehaviour
     {
         health -= damage;
 
-        print($"HP: {health}/{maxHealth}");
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+
+        healthDisplay.SetText(string.Format("Health: {0}/{1}", health, maxHealth));
 
         if (health <= 0)
         {
@@ -197,13 +207,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void PickupItem(Material obj)
+    public void PickupItem(string obj)
     {
-        inventory.Add(obj.type);  
 
-        foreach (string item in inventory)
+        if (obj.Equals("Health"))
         {
-            print(item);
+            GetAttacked(-3);
+            return;
         }
+        inventory.Add(obj);
     }
 }
