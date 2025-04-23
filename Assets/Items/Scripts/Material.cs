@@ -7,7 +7,7 @@ public class Material : MonoBehaviour
 
     public void asEnemyDrop()
     {
-        Vector2 newForce = new Vector2(Random.Range(-10, 10), Random.Range(3, 10));
+        Vector2 newForce = new Vector2(Random.Range(-30, 30), Random.Range(10, 50));
         GetComponent<Rigidbody2D>().AddForce(newForce);
     }
 

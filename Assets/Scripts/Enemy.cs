@@ -60,14 +60,14 @@ public class Enemy : MonoBehaviour
             //    break;
         }
 
-        if (rb.linearVelocityX > 0f)
-        {
-            rb.linearVelocityX = rb.linearVelocityX * (1-Time.deltaTime);
-        }
-        else if (rb.linearVelocityX < 0f)
-        {
-            rb.linearVelocityX = rb.linearVelocityX * (1-Time.deltaTime);
-        }
+        //if (rb.linearVelocityX > 0f)
+        //{
+        //    rb.linearVelocityX = rb.linearVelocityX * (1-Time.deltaTime);
+        //}
+        //else if (rb.linearVelocityX < 0f)
+        //{
+        //    rb.linearVelocityX = rb.linearVelocityX * (1-Time.deltaTime);
+        //}
     }
 
     private void PerformPatrol()

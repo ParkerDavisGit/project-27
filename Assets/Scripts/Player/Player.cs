@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
         public bool pressed;
         public bool justPressed;
         public bool justReleased;
+
 
         public KeyState()
         {
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
     private PlayerAction action;
     private Vector2 moveDirection;
     private Rigidbody2D rb;
+    private Animator animator;
 
     private Feet feet;
     private bool onGround;
@@ -66,7 +69,7 @@ public class Player : MonoBehaviour
         timeInAir = 0f;
         gravityScale = 1.0f;
         jumped = false;
-
+        animator = GetComponent<Animator>();
         buttonPresses = new float[5];
         buttonPresses[0] = 0.0f;   // JUMP
         buttonPresses[1] = 0.0f;
@@ -78,6 +81,8 @@ public class Player : MonoBehaviour
 
         keys.Add(KeyType.JUMP, new KeyState());
         keys.Add(KeyType.ATTACK, new KeyState());
+
+        GameManager.ToggleInventory();
 
         //healthDisplay.SetText(string.Format("Health: {0}/{1}", health, maxHealth));
     }
@@ -144,10 +149,25 @@ public class Player : MonoBehaviour
     {
         onGround = feet.OnGround();
 
+        if (rb.linearVelocityX == 0)
+        {
+            animator.SetBool("OnWalk", false);
+        }
+        else if (rb.linearVelocityX.CompareTo(0f) == -1)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+            animator.SetBool("OnWalk", true);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            animator.SetBool("OnWalk", true);
+        }
+
         if (keys[KeyType.ATTACK].justPressed)
         {
             RaycastHit2D results = Physics2D.Raycast(transform.position, new Vector2(1f, 0f), 1f, LayerMask.GetMask("Enemies"));
-            
+
             if (results)
             {
                 results.transform.gameObject.GetComponent<Enemy>().Whack();
