@@ -7,6 +7,13 @@ TagManager:
   - ground
   - Enemy
   - UICanvas
+  - SFWarrior
+  - UIHealthDisplay
+  - ShootyDrone
+  - LevelHandler
+  - Titan
+  - PlayerBullet
+  - Jukebox
   layers:
   - Default
   - TransparentFX
@@ -17,7 +24,7 @@ TagManager:
   - Ground
   - Enemies
   - Items
-  - 
+  - Bullets
   - 
   - 
   - 
@@ -47,6 +54,15 @@ TagManager:
   - name: Background
     uniqueID: 1910566927
     locked: 0
+  - name: BackgroundTileOne
+    uniqueID: 2280473421
+    locked: 0
+  - name: BackgroundTileTwo
+    uniqueID: 1930209947
+    locked: 0
+  - name: BackgroundTileThree
+    uniqueID: 2962244513
+    locked: 0
   - name: TileBG
     uniqueID: 715077297
     locked: 0
@@ -70,6 +86,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1203968199
+    locked: 0
+  - name: Bullets
+    uniqueID: 3222347633
     locked: 0
   - name: GroundOverlay
     uniqueID: 746220943

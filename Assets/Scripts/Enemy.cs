@@ -132,8 +132,10 @@ public class Enemy : MonoBehaviour
             KillSelf();
         }
         //float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
-        rb.AddForce(new Vector2(transform.position.x - player.transform.position.x, .5f) * 200);
+        
+        /// Cut for time ///
+        //var force = new Vector2(transform.position.x - player.transform.position.x, .5f);
+        //rb.AddForce(force.normalized);
     }
 
     public void KillSelf()

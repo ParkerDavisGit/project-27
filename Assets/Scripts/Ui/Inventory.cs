@@ -50,7 +50,7 @@ public class Inventory : MonoBehaviour
 
     void UpdateDisplay()
     {
-        appleText.SetText("Apple: " + apple.count);
+        appleText.SetText("Apple: " + InventoryManager.Get("Apple"));
     }
 
     public void Add(string name)

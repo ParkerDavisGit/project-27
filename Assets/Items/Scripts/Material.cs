@@ -8,7 +8,7 @@ public class Material : MonoBehaviour
     public void asEnemyDrop()
     {
         Vector2 newForce = new Vector2(Random.Range(-30, 30), Random.Range(10, 50));
-        GetComponent<Rigidbody2D>().AddForce(newForce);
+        GetComponent<Rigidbody2D>().AddForce(newForce*3);
     }
 
     public void OnTriggerEnter2D(Collider2D obj)
